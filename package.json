@@ -1,0 +1,24 @@
+{
+  "name": "movenow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "ts-node src/demo.ts",
+    "update_env": "ts-node src/update_env.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.22.2",
+    "dotenv": "^16.4.5",
+    "yaml": "^2.4.5"
+  }
+}

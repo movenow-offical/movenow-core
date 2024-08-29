@@ -1,0 +1,17 @@
+[package]
+name = "movenow"
+version = "1.0.0"
+authors = []
+
+[addresses]
+aptos_framework = "0x1"
+movenow = "_"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "aptos-cli-v2.4.0"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]

@@ -1,0 +1,28 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  build:
+    cmds:
+      - aptos move compile --named-addresses movenow=default
+    sources:
+      - sources/**/*.move
+  init:
+    cmds:
+      - rm -rf .aptos/config.yaml
+#      - aptos init --network devnet --assume-yes <<< ""
+      - aptos init --network custom --rest-url https://aptos.testnet.suzuka.movementlabs.xyz/v1 --faucet-url https://faucet.testnet.suzuka.movementlabs.xyz --assume-yes <<< ""
+      - pnpm update_env
+  publish:
+    cmds:
+      - aptos move publish --named-addresses movenow=default --assume-yes
+  demo:
+    cmds:
+      - pnpm demo
+    sources:
+      - src/*.ts
+      - .env
